@@ -1,0 +1,13 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 28.5rem);
+  place-content: center;
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+
+  // display: flex;
+  // justify-content: center;
+  // flex-wrap: wrap;
+  // column-gap: 3.2rem;
+  // row-gap: 4rem;
+}

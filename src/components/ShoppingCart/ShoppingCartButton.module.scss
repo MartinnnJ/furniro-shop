@@ -1,0 +1,14 @@
+.button {
+  padding: .6rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-radius: 50px;
+  background-color: #FFF;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: $cart-price-color;
+  color: $cart-price-color;
+}

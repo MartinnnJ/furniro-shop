@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  list-style: none;
+}
+
+.list__item {
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.list__item:hover {
+  color: $footer-input-color;
+}
+
+.list__item--heading {
+  color: $footer-font-color;
+  cursor: auto;
+}
+
+.list__item--heading:hover {
+  color: $footer-font-color;
+}

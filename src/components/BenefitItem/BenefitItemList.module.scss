@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  height: 27rem;
+  background-color: $benefit-list-bg;
+}

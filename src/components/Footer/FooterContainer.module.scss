@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.8rem 10rem;
+}
+
+.line {
+  width: 124rem;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #D9D9D9;
+}
+
+.copyrights {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 3.5rem 10rem;
+}

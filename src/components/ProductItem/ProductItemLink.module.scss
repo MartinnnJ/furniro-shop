@@ -1,0 +1,16 @@
+.product-link {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.product-link__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.product-link__text {
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 600;
+}

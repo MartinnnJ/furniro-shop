@@ -1,0 +1,332 @@
+{
+  "cart": [
+    {
+      "id": "3112e3a9-e186-4c7d-b437-55270d3d9f81",
+      "productId": 3,
+      "productImageId": "03",
+      "productTitle": "Lolito",
+      "productPrice": 7000,
+      "productCount": 1
+    },
+    {
+      "id": "a03f5140-e98d-43d0-9c61-f545a44ce30a",
+      "productId": 1,
+      "productImageId": "01",
+      "productTitle": "Slytherin",
+      "productPrice": 2500,
+      "productCount": 1
+    },
+    {
+      "id": "a517eb8f-6468-45b8-84e8-ee28591c4576",
+      "productId": 21,
+      "productImageId": "21",
+      "productTitle": "Levgardium",
+      "productPrice": 4500,
+      "productCount": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "productId": 1,
+      "productImageId": "01",
+      "productTitle": "Slytherin",
+      "productDescription": "Stylish cafe chair",
+      "productPrice": {
+        "currentPrice": 2500,
+        "originalPrice": 2800,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 2,
+      "productImageId": "02",
+      "productTitle": "Leviosa",
+      "productDescription": "Stylish cafe chair",
+      "productPrice": {
+        "currentPrice": 1500,
+        "originalPrice": 1500,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 3,
+      "productImageId": "03",
+      "productTitle": "Lolito",
+      "productDescription": "Luxury big sofa",
+      "productPrice": {
+        "currentPrice": 7000,
+        "originalPrice": 9500,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 4,
+      "productImageId": "04",
+      "productTitle": "Respira",
+      "productDescription": "Outdoor bar table and stool",
+      "productPrice": {
+        "currentPrice": 1200,
+        "originalPrice": 1200,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 5,
+      "productImageId": "05",
+      "productTitle": "Grifo",
+      "productDescription": "Night lamp",
+      "productPrice": {
+        "currentPrice": 180,
+        "originalPrice": 180,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 6,
+      "productImageId": "06",
+      "productTitle": "Muggo",
+      "productDescription": "Small mug",
+      "productPrice": {
+        "currentPrice": 1300,
+        "originalPrice": 1850,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 7,
+      "productImageId": "07",
+      "productTitle": "Pingky",
+      "productDescription": "Cute bed set",
+      "productPrice": {
+        "currentPrice": 2000,
+        "originalPrice": 3000,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 8,
+      "productImageId": "08",
+      "productTitle": "Potty",
+      "productDescription": "Minimalist flower pot",
+      "productPrice": {
+        "currentPrice": 1100,
+        "originalPrice": 1100,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 9,
+      "productImageId": "09",
+      "productTitle": "Scandinavium",
+      "productDescription": "Sleeping bed",
+      "productPrice": {
+        "currentPrice": 3000,
+        "originalPrice": 4200,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 10,
+      "productImageId": "10",
+      "productTitle": "Totallum",
+      "productDescription": "Large sleeping bed",
+      "productPrice": {
+        "currentPrice": 3500,
+        "originalPrice": 4000,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 11,
+      "productImageId": "11",
+      "productTitle": "Beddy",
+      "productDescription": "Sleeping set for two",
+      "productPrice": {
+        "currentPrice": 2750,
+        "originalPrice": 3200,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 12,
+      "productImageId": "12",
+      "productTitle": "Lux Beddy",
+      "productDescription": "Luxury sleeping set for two",
+      "productPrice": {
+        "currentPrice": 5000,
+        "originalPrice": 5000,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 13,
+      "productImageId": "13",
+      "productTitle": "Taffoly",
+      "productDescription": "Night lamp to bedroom",
+      "productPrice": {
+        "currentPrice": 500,
+        "originalPrice": 700,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 14,
+      "productImageId": "14",
+      "productTitle": "Soffoly",
+      "productDescription": "Large sofa",
+      "productPrice": {
+        "currentPrice": 2500,
+        "originalPrice": 3750,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 15,
+      "productImageId": "15",
+      "productTitle": "Gryffindor",
+      "productDescription": "Large sofa set",
+      "productPrice": {
+        "currentPrice": 3100,
+        "originalPrice": 3100,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 16,
+      "productImageId": "16",
+      "productTitle": "Hufflepuff",
+      "productDescription": "Modern large sofa set",
+      "productPrice": {
+        "currentPrice": 4200,
+        "originalPrice": 4500,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 17,
+      "productImageId": "17",
+      "productTitle": "Ravenclaw",
+      "productDescription": "Luxury sofa",
+      "productPrice": {
+        "currentPrice": 3000,
+        "originalPrice": 3000,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 18,
+      "productImageId": "18",
+      "productTitle": "Woodyly",
+      "productDescription": "Kitchen table set",
+      "productPrice": {
+        "currentPrice": 5000,
+        "originalPrice": 5000,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 19,
+      "productImageId": "19",
+      "productTitle": "Buffy",
+      "productDescription": "Medium large table set",
+      "productPrice": {
+        "currentPrice": 2000,
+        "originalPrice": 2600,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 20,
+      "productImageId": "20",
+      "productTitle": "Leviantan",
+      "productDescription": "Trendy table set",
+      "productPrice": {
+        "currentPrice": 3000,
+        "originalPrice": 3800,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 21,
+      "productImageId": "21",
+      "productTitle": "Levgardium",
+      "productDescription": "Wooden table set",
+      "productPrice": {
+        "currentPrice": 4500,
+        "originalPrice": 5000,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    },
+    {
+      "productId": 22,
+      "productImageId": "22",
+      "productTitle": "Jelly Cafe Red",
+      "productDescription": "Modern cafe chair",
+      "productPrice": {
+        "currentPrice": 500,
+        "originalPrice": 850,
+        "baseCurrency": "eur"
+      },
+      "isNew": false,
+      "isFavorite": false
+    },
+    {
+      "productId": 23,
+      "productImageId": "23",
+      "productTitle": "Jelly Cafe White",
+      "productDescription": "Modern cafe chair",
+      "productPrice": {
+        "currentPrice": 500,
+        "originalPrice": 850,
+        "baseCurrency": "eur"
+      },
+      "isNew": true,
+      "isFavorite": false
+    }
+  ]
+}

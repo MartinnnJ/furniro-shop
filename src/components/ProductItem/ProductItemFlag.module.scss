@@ -1,0 +1,23 @@
+.flag {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.flag--discount {
+  background-color: $product-discount-flag-bg;
+}
+
+.flag--new {
+  background-color: $product-new-flag-bg;
+}
+
+.flag__text {
+  display: block;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-weight: 500;
+  line-height: 4.8rem;
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+.spinner__inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.spinner__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem auto;
+
+  width: 15rem;
+  height: 15rem;
+  background-color: #F2F2F2;
+  border-radius: 1rem;
+  font-size: 10rem;
+}
+
+.spinner__inline,
+.spinner__block {
+  svg {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes rotate {
+
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+
+}

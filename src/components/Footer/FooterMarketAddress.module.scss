@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.container__name {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.container__address {
+  max-width: 28.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $footer-font-color;
+
+  span {
+    display: block;
+  }
+}

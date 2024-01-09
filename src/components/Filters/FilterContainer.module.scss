@@ -1,0 +1,49 @@
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  padding: 0 10rem;
+  background-color: $filter-container-bg;
+  margin-bottom: 6.3rem;
+}
+
+.filter-container__settings {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.filter-container__filter {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.filter-container__text {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.filter-container__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.filter-container__results {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.filter-container__showcases {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.line {
+  width: 2px;
+  height: 3.7rem;
+  background-color: #9F9F9F;
+}

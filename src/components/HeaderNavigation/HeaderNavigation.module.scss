@@ -1,0 +1,52 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.5rem 10rem;
+}
+
+.navigation__link-list,
+.navigation__icon-list {
+  display: flex;
+  align-items: center;
+  gap: 7.5rem;
+  list-style: none;
+}
+
+.navigation__icon-list {
+  position: relative;
+  gap: 4.5rem;
+}
+
+.navigation__link {
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navigation__link:hover {
+  color: $footer-input-color;
+}
+
+.navigation__icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  cursor: pointer;
+}
+
+.navigation__icon-list-item {
+  position: relative;
+}
+
+.navigation__icon-notification {
+  position: absolute;
+  top: -1rem;
+  right: -.8rem;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #FFF;
+  border-radius: 50%;
+  background-color: red;
+}

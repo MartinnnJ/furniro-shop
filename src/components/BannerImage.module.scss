@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+}
+
+.overlay,
+.banner {
+  height: 31.6rem;
+}
+
+.overlay {
+  filter: blur(3px) opacity(60%);
+}
+
+.banner {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner__heading {
+  font-size: 4.8rem;
+  font-weight: 500;
+}
+
+.banner__route {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+
+  font-size: 1.6rem;
+  font-weight: 300;
+
+  span {
+    font-weight: 500;
+  }
+}
