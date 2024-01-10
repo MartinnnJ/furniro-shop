@@ -1,11 +1,19 @@
+import { useDispatch } from 'react-redux';
 import useCurrency from '../../hooks/useCurrency';
 import { setBgImageInline } from '../../helpers';
+import { deleteFromCart } from '../../store/slices/shopping-cart-slice';
 import DeleteIcon from '@assets/shopping-cart-delete-icon.svg';
 import styles from './ShoppingCartItem.module.scss';
 
-export default function ShoppingCartItem({ name, image, count, price }) {
+export default function ShoppingCartItem({ id, name, image, count, price }) {
+  const dispatch = useDispatch();
   const [formattedPrice, currencyOutput] = useCurrency(price);
   const bgImageStyles = setBgImageInline(image);
+
+  const removeFromShoppingCartHandler = id => {
+    const productToRemove = id[0];
+    dispatch(deleteFromCart(productToRemove));
+  };
 
   return (
     <div className={styles['cart-item']}>
@@ -27,7 +35,12 @@ export default function ShoppingCartItem({ name, image, count, price }) {
           </span>
         </p>
       </div>
-      <img className={styles['cart-item__button']} src={DeleteIcon} alt="icon" />
+      <img
+        className={styles['cart-item__button']}
+        src={DeleteIcon}
+        alt="icon"
+        onClick={() => removeFromShoppingCartHandler(id)}
+      />
     </div>
   );
 }

@@ -12,7 +12,7 @@ import styles from "./HeaderNavigation.module.scss";
 export default function HeaderNavigation() {
   const [shoppingCartOpen, setShoppingCartOpen] = useState(false);
   const cartItems = useSelector(state => state.cart.items);
-  const cartItemsNotificationCount = cartItems.map(item => item.productCount).reduce((a, b) => a + b, 0);
+  const cartItemsNotificationCount = cartItems.map(item => item.id.length).reduce((a, b) => a + b, 0);
 
   return (
     <nav className={styles.navigation}>

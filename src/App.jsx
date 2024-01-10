@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadAllProducts, getLatestCurrencyRates } from "./store/slices/products-slice";
-import { loadAllShoppingCartItems } from "./store/slices/shopping-cart-slice";
+import { loadAllShoppingCartItems, shoppingCartActions } from "./store/slices/shopping-cart-slice";
 import { paginatorSliceValues } from "./helpers";
 import { BENEFITS_LIST, FOOTER_NAVIGATION_DATA } from "./store/static-data";
 import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation";
@@ -30,6 +30,7 @@ export default function App() {
 
   useEffect(() => {
     dispatch(loadAllProducts());
+    dispatch(shoppingCartActions.setUpdatingStatus({ productId: null, status: true }));
     dispatch(loadAllShoppingCartItems());
     dispatch(getLatestCurrencyRates());
   }, [dispatch]);

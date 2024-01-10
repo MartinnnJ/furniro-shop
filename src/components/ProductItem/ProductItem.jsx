@@ -15,21 +15,23 @@ import styles from './ProductItem.module.scss';
 
 export default function ProductItem({ id, bgImageName, title, description, price, isNew }) {
   const [overlay, setOverlay] = useState(false);
-  const cartIsUpdating = useSelector(state => state.cart.isCurrentlyUpdating);
   const dispatch = useDispatch();
+  const {
+    productId: updatingProductId,
+    status: updatingStatus
+  } = useSelector(state => state.cart.isCurrentlyUpdating);
 
   const isDiscount = price.currentPrice !== price.originalPrice;
   const bgImageStyles = setBgImageInline(bgImageName);
 
   const addToShoppingCartHandler = (id, bgId, title, price) => {
-    dispatch(shoppingCartActions.setUpdatingStatus(true));
+    dispatch(shoppingCartActions.setUpdatingStatus({ productId: id, status: true }));
     const newItem = {
       id: v4(),
-      productId: id,
+      product: id,
       productImageId: bgId,
       productTitle: title,
       productPrice: price.currentPrice,
-      productCount: 1
     };
     dispatch(updateShoppingCart(newItem));
   };
@@ -60,7 +62,7 @@ export default function ProductItem({ id, bgImageName, title, description, price
       {overlay && (
         <div className={styles['product-item__overlay']}>
           <ProductItemButton onClick={() => addToShoppingCartHandler(id, bgImageName, title, price)}>
-            {cartIsUpdating ? <LoadingSpinner inline={true} /> : 'Add to cart'}
+            {(updatingProductId === id && updatingStatus) ? <LoadingSpinner inline={true} /> : 'Add to cart'}
           </ProductItemButton>
           <div className={styles['product-item__link-container']}>
             <ProductItemLink icon={ShareIcon} text="Share" />

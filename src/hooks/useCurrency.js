@@ -6,7 +6,7 @@ export default function useCurrency(amount) {
   const defaultCurrency = useSelector(state => state.products.defaultCurrency);
   const selectedCurrency = useSelector(state => state.products.selectedCurrency);
 
-  const currencyOutput = selectedCurrency.toUpperCase();
+  const currencyOutput = selectedCurrency?.toUpperCase();
   const formattedAmount = convertCurrency(amount, defaultCurrency, selectedCurrency, latestCurrencyRates);
 
   return [formattedAmount, currencyOutput];

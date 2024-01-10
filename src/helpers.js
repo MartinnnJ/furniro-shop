@@ -11,7 +11,7 @@ export const setBgImageInline = imageName => {
 }
 
 export const convertCurrency = (amount, defaultCurr, targetCurr, rates) => {
-  if (defaultCurr === targetCurr) return amount.toLocaleString("de-DE");
+  if (defaultCurr === targetCurr) return amount?.toLocaleString("de-DE");
   let rate;
   for (const currKey in rates) {
     if (currKey === targetCurr.toUpperCase()) {
@@ -19,7 +19,7 @@ export const convertCurrency = (amount, defaultCurr, targetCurr, rates) => {
       break;
     }
   }
-  return Math.floor((amount * rate)).toLocaleString("de-DE");
+  return Math.floor((amount * rate))?.toLocaleString("de-DE");
 };
 
 export const scrollUp = () => {
