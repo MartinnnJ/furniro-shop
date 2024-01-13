@@ -5,6 +5,8 @@ export const supportedCurrencies = ['eur', 'usd', 'czk'];
 
 const initialState = {
   items: [],
+  sort: -1,
+  kind: -1,
   defaultCurrency: undefined,
   selectedCurrency: undefined,
   latestCurrencyRates: undefined,
@@ -18,6 +20,9 @@ const productsSlice = createSlice({
       state.items = action.payload;
       state.defaultCurrency = action.payload[0].productPrice.baseCurrency;
       state.selectedCurrency = state.defaultCurrency;
+    },
+    setSortType(state, action) {
+      state.sort = +action.payload;
     },
     setCurrency(state, action) {
       state.selectedCurrency = action.payload;

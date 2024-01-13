@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadAllProducts, getLatestCurrencyRates } from "./store/slices/products-slice";
 import { loadAllShoppingCartItems, shoppingCartActions } from "./store/slices/shopping-cart-slice";
-import { paginatorSliceValues } from "./helpers";
+import { paginatorSliceValues, sortFn } from "./helpers";
 import { BENEFITS_LIST, FOOTER_NAVIGATION_DATA } from "./store/static-data";
 import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation";
 import BannerImage from "./components/BannerImage";
@@ -21,12 +21,13 @@ import CurrencySetter from "./components/Footer/CurrencySetter";
 
 export default function App() {
   const paginatorPageSelected = useSelector(state => state.paginator.pageSelected);
+  const sortTypeSelected = useSelector(state => state.products.sort);
   const productsPerPage = useSelector(state => state.paginator.pageResults);
   const products = useSelector(state => state.products.items);
   const dispatch = useDispatch();
 
   const [start, end] = paginatorSliceValues(paginatorPageSelected, productsPerPage);
-  const paginatedProducts = products.slice(start, end);
+  const paginatedProducts = sortFn(products, sortTypeSelected).slice(start, end);
 
   useEffect(() => {
     dispatch(loadAllProducts());
@@ -68,7 +69,12 @@ export default function App() {
     <>
       <HeaderNavigation />
       <BannerImage />
-      <FilterContainer />
+      <FilterContainer
+        productsRange={[start, end]}
+        productsCount={products.length}
+        sortType={sortTypeSelected}
+        productsPerPage={productsPerPage}
+      />
       {products.length === 0 ? (
         <LoadingSpinner />
       ) : (

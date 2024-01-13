@@ -12,6 +12,9 @@ const paginatorSlice = createSlice({
     changeSelectedPage(state, action) {
       state.pageSelected = +action.payload;
     },
+    setGridLayout(state, action) {
+      state.pageResults = +action.payload;
+    }
   },
 });
 

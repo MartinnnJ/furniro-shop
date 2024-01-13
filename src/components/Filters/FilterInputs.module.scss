@@ -1,0 +1,30 @@
+.filter-inputs {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+  height: 10rem;
+  padding: 0 10rem;
+  background-color: $filter-container-bg;
+  border-top: 1px solid lightgrey;
+}
+
+.filter-inputs__container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filter-inputs__input {
+  min-width: 15rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+.filter-inputs__submit {
+  margin-left: auto;
+  width: 10rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+}

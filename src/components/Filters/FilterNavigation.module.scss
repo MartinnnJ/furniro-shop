@@ -1,0 +1,54 @@
+.filter-navigation {
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  padding: 0 10rem;
+  background-color: $filter-container-bg;
+}
+
+.filter-navigation__settings {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.filter-navigation__filter {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0 .5rem;
+  cursor: pointer;
+}
+
+.filter-navigation__filter:hover {
+  background-color: darken($filter-container-bg, 10%);
+  border-radius: 5px;
+}
+
+.filter-navigation__text {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.filter-navigation__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.filter-navigation__results {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.filter-navigation__showcases {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.line {
+  width: 2px;
+  height: 3.7rem;
+  background-color: #9F9F9F;
+}

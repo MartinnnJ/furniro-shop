@@ -1,5 +1,35 @@
 export const BASE_URL = 'http://127.0.0.1:3000';
 
+export const sortTypeMapper = new Map([
+  [-1, "Default"],
+  [0, "A - Z"],
+  [1, "Z - A"],
+  [2, "Most Expensive"],
+  [3, "Cheapest"],
+]);
+
+export const sortFn = (items, type) => {
+  const temp = [...items];
+  if (type === -1) {
+    return items;
+  } else if (type === 0) {
+    return temp.sort((a, b) => a.productTitle.localeCompare(b.productTitle))
+  } else if (type === 1) {
+    return temp.sort((a, b) => b.productTitle.localeCompare(a.productTitle))
+  } else if (type === 2) {
+    return temp.sort((a, b) => b.productPrice.currentPrice - a.productPrice.currentPrice);
+  } else {
+    return temp.sort((a, b) => a.productPrice.currentPrice - b.productPrice.currentPrice);
+  }
+}
+
+export const kindTypeMapper = new Map([
+  [-1, "All"],
+  [0, "Dinner"],
+  [1, "Kitchen"],
+  [2, "Bedroom"],
+]);
+
 export const setBgImageInline = imageName => {
   return {
     // ./ refers to the public folder
