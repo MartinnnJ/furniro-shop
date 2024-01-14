@@ -19,8 +19,10 @@ export default function FilterInputs() {
 
   const onFormSubmitHandler = e => {
     e.preventDefault();
+    dispatch(paginatorActions.changeSelectedPage(1));
     dispatch(paginatorActions.setGridLayout(filterValues['grid']));
     dispatch(productsActions.setSortType(filterValues['sort']));
+    dispatch(productsActions.setKindType(filterValues['kind']));
   }
 
   const gridChangeHandler = value => {

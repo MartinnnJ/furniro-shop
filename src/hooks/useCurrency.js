@@ -7,7 +7,8 @@ export default function useCurrency(amount) {
   const selectedCurrency = useSelector(state => state.products.selectedCurrency);
 
   const currencyOutput = selectedCurrency?.toUpperCase();
-  const formattedAmount = convertCurrency(amount, defaultCurrency, selectedCurrency, latestCurrencyRates);
+  let formattedAmount = convertCurrency(amount, defaultCurrency, selectedCurrency, latestCurrencyRates);
+  formattedAmount = +formattedAmount === 0 ? "0.00" : formattedAmount;
 
   return [formattedAmount, currencyOutput];
 }

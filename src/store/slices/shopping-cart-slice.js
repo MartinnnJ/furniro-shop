@@ -33,7 +33,7 @@ const shoppingCartSlice = createSlice({
       state.items = reducedItems;
       state.totalAmount = action.payload
         .map(item => item.productPrice)
-        .reduce((a, b) => a + b, 0) || '0.00';
+        .reduce((a, b) => a + b, 0);
     },
   },
 });

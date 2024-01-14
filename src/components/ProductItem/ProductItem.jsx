@@ -21,6 +21,7 @@ export default function ProductItem({ id, bgImageName, title, description, price
     status: updatingStatus
   } = useSelector(state => state.cart.isCurrentlyUpdating);
 
+  const isBtnDisabled = updatingProductId === id && updatingStatus;
   const isDiscount = price.currentPrice !== price.originalPrice;
   const bgImageStyles = setBgImageInline(bgImageName);
 
@@ -61,8 +62,11 @@ export default function ProductItem({ id, bgImageName, title, description, price
 
       {overlay && (
         <div className={styles['product-item__overlay']}>
-          <ProductItemButton onClick={() => addToShoppingCartHandler(id, bgImageName, title, price)}>
-            {(updatingProductId === id && updatingStatus) ? <LoadingSpinner inline={true} /> : 'Add to cart'}
+          <ProductItemButton
+            onClick={() => addToShoppingCartHandler(id, bgImageName, title, price)}
+            disabled={isBtnDisabled}
+          >
+            {isBtnDisabled ? <LoadingSpinner inline={true} /> : 'Add to cart'}
           </ProductItemButton>
           <div className={styles['product-item__link-container']}>
             <ProductItemLink icon={ShareIcon} text="Share" />

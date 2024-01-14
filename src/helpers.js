@@ -25,10 +25,23 @@ export const sortFn = (items, type) => {
 
 export const kindTypeMapper = new Map([
   [-1, "All"],
-  [0, "Dinner"],
+  [0, "Living room"],
   [1, "Kitchen"],
   [2, "Bedroom"],
 ]);
+
+export const filterFn = (items, type) => {
+  if (type === -1) return items;
+  
+  const filtered = items.filter(item => {
+    if (item.kind.includes(type)) {
+      return true; // returned
+    } else {
+      return false; // filtered
+    }
+  });
+  return filtered;
+};
 
 export const setBgImageInline = imageName => {
   return {

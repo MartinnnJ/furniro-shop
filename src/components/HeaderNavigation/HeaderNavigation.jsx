@@ -15,47 +15,49 @@ export default function HeaderNavigation() {
   const cartItemsNotificationCount = cartItems.map(item => item.id.length).reduce((a, b) => a + b, 0);
 
   return (
-    <nav className={styles.navigation}>
-      <MarketLogo icon={Logo} text="Furniro" />
-      <ul className={styles['navigation__link-list']}>
-        <li className={styles.navigation__link}>
-          Home
-        </li>
-        <li className={styles.navigation__link}>
-          Shop
-        </li>
-        <li className={styles.navigation__link}>
-          About
-        </li>
-        <li className={styles.navigation__link}>
-          Contact
-        </li>
-      </ul>
-      <ul className={styles['navigation__icon-list']}>
-        <li className={styles['navigation__icon-list-item']}>
-          <img className={styles.navigation__icon} src={AccountAlertIcon} alt="icon" />
-        </li>
-        <li className={styles['navigation__icon-list-item']}>
-          <img className={styles.navigation__icon} src={SearchIcon} alt="icon" />
-        </li>
-        <li className={styles['navigation__icon-list-item']}>
-          <img className={styles.navigation__icon} src={LikeIcon} alt="icon" />
-        </li>
-        <li className={styles['navigation__icon-list-item']}>
-          <img
-            className={styles.navigation__icon}
-            src={CartIcon}
-            alt="icon"
-            onClick={() => setShoppingCartOpen(prevState => !prevState)}
-          />
-          {cartItemsNotificationCount > 0 && (
-            <div className={styles['navigation__icon-notification']}>
-              {cartItemsNotificationCount}
-            </div>
-          )}
-        </li>
-        {shoppingCartOpen && <ShoppingCart />}
-      </ul>
-    </nav>
+    <div className={styles.static}>
+      <nav className={styles.navigation}>
+        <MarketLogo icon={Logo} text="Furniro" />
+        <ul className={styles['navigation__link-list']}>
+          <li className={styles.navigation__link}>
+            Home
+          </li>
+          <li className={styles.navigation__link}>
+            Shop
+          </li>
+          <li className={styles.navigation__link}>
+            About
+          </li>
+          <li className={styles.navigation__link}>
+            Contact
+          </li>
+        </ul>
+        <ul className={styles['navigation__icon-list']}>
+          <li className={styles['navigation__icon-list-item']}>
+            <img className={styles.navigation__icon} src={AccountAlertIcon} alt="icon" />
+          </li>
+          <li className={styles['navigation__icon-list-item']}>
+            <img className={styles.navigation__icon} src={SearchIcon} alt="icon" />
+          </li>
+          <li className={styles['navigation__icon-list-item']}>
+            <img className={styles.navigation__icon} src={LikeIcon} alt="icon" />
+          </li>
+          <li className={styles['navigation__icon-list-item']}>
+            <img
+              className={styles.navigation__icon}
+              src={CartIcon}
+              alt="icon"
+              onClick={() => setShoppingCartOpen(prevState => !prevState)}
+            />
+            {cartItemsNotificationCount > 0 && (
+              <div className={styles['navigation__icon-notification']}>
+                {cartItemsNotificationCount}
+              </div>
+            )}
+          </li>
+          {shoppingCartOpen && <ShoppingCart />}
+        </ul>
+      </nav>
+    </div>
   );
 }

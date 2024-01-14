@@ -24,6 +24,9 @@ const productsSlice = createSlice({
     setSortType(state, action) {
       state.sort = +action.payload;
     },
+    setKindType(state, action) {
+      state.kind = +action.payload;
+    },
     setCurrency(state, action) {
       state.selectedCurrency = action.payload;
     },

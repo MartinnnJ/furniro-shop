@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadAllProducts, getLatestCurrencyRates } from "./store/slices/products-slice";
 import { loadAllShoppingCartItems, shoppingCartActions } from "./store/slices/shopping-cart-slice";
-import { paginatorSliceValues, sortFn } from "./helpers";
+import { paginatorSliceValues, sortFn, filterFn } from "./helpers";
 import { BENEFITS_LIST, FOOTER_NAVIGATION_DATA } from "./store/static-data";
 import HeaderNavigation from "./components/HeaderNavigation/HeaderNavigation";
 import BannerImage from "./components/BannerImage";
@@ -21,13 +21,16 @@ import CurrencySetter from "./components/Footer/CurrencySetter";
 
 export default function App() {
   const paginatorPageSelected = useSelector(state => state.paginator.pageSelected);
-  const sortTypeSelected = useSelector(state => state.products.sort);
   const productsPerPage = useSelector(state => state.paginator.pageResults);
+  const sortTypeSelected = useSelector(state => state.products.sort);
+  const kindTypeSelected = useSelector(state => state.products.kind);
   const products = useSelector(state => state.products.items);
   const dispatch = useDispatch();
 
   const [start, end] = paginatorSliceValues(paginatorPageSelected, productsPerPage);
-  const paginatedProducts = sortFn(products, sortTypeSelected).slice(start, end);
+  const filteredProducts = filterFn(products, kindTypeSelected);
+  const paginatedSortedProducts = sortFn(filteredProducts, sortTypeSelected).slice(start, end);
+  console.log(filteredProducts);
 
   useEffect(() => {
     dispatch(loadAllProducts());
@@ -37,7 +40,7 @@ export default function App() {
   }, [dispatch]);
 
   const renderedProducts = (
-    paginatedProducts.map(product => {
+    paginatedSortedProducts.map(product => {
       return (
         <ProductItem
           key={product.productId}
@@ -71,7 +74,7 @@ export default function App() {
       <BannerImage />
       <FilterContainer
         productsRange={[start, end]}
-        productsCount={products.length}
+        productsCount={filteredProducts.length}
         sortType={sortTypeSelected}
         productsPerPage={productsPerPage}
       />
@@ -82,7 +85,7 @@ export default function App() {
           {renderedProducts}
         </ProductItemList>
       )}
-      <ProductPaginator productsCount={products.length} />
+      <ProductPaginator productsCount={filteredProducts.length} />
       <BenefitItemList>
         {renderedBenefitItems}
       </BenefitItemList>

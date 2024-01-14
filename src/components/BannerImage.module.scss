@@ -1,5 +1,6 @@
 .container {
   position: relative;
+  margin-top: calc($navbar-height + 0.5rem);
 }
 
 .overlay,

@@ -1,7 +1,23 @@
+.static {
+  width: 100%;
+  height: $navbar-height;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: #FFF;
+}
+
 .navigation {
+  width: $max-website-width;
+  height: $navbar-height;
+  margin: 0 auto;
+  padding: 0 10rem;
+
   display: flex;
   justify-content: space-between;
-  padding: 3.5rem 10rem;
+  align-items: center;
 }
 
 .navigation__link-list,
